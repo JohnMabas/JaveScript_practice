@@ -44,5 +44,15 @@ arr1.filter((item, index)=>{
   } else {
     return false;
   }
-  console.log(index);
+  console.log(item);
 });
+
+
+// map......
+
+let arr3 = [3, 6, 9, 12, 15, 18];
+
+arr3.map((item, index)=>{
+  console.log(item * 4) 
+  // console.log(index) 
+})
