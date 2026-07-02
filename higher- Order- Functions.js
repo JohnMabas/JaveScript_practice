@@ -56,3 +56,15 @@ arr3.map((item, index)=>{
   console.log(item * 4) 
   // console.log(index) 
 })
+
+////
+let users = [
+    {firstName: 'John', lastName: 'Doe', age: 25},
+    {firstName: 'Jane', lastName: 'Doe', age: 30},
+    {firstName: 'Jack', lastName: 'Doe', age: 35},
+    {firstName: 'Jill', lastName: 'Doe', age: 40},
+    {firstName: 'Joe', lastName: 'Doe', age: 45},
+]
+
+let result = users.map((user) => user.firstName + ' ' + user.lastName)
+console.log(result);
