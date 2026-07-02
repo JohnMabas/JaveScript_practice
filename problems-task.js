@@ -21,7 +21,7 @@ let studentsIds = (students, Id) => {
     })
 }
 
-// studentsIds(students, '2367')
+studentsIds(students, '2367')
 
 let deleteStudents = (students, Id) => {
     students.forEach((value, key) => {
@@ -54,7 +54,55 @@ const programmingLanguages = new Set();
  })
 
 
-//  console.log(programmingLanguages)
+//  3.Build a contact List usisng Map
+//  - Use phone number as keys and names as values
+//  - Add, update, delete contacts
+//  - Search for a contact by number
+
+const contactList = new Map();
+
+let addContact = (phoneNo, name) =>{
+    contactList.set(phoneNo, name)
+}
+
+let deleteContact = (contactList, name) => {
+    contactList.forEach((value, key) =>{
+        if(key === name) {
+            contactList.delete(key)
+        }
+    })
+
+
+}
+
+let search = (contactList, phoneNo) => {
+    contactList.forEach((value, key) => {
+        if(key === phoneNo){
+            console.log(`${value} - ${key}`)
+        }
+    })
+}
+
+addContact(9060096590, 'mabas')
+addContact(1234, 'John')
+addContact(9956, 'Hope')
+addContact(4444, 'Joy')
+addContact(5555, 'John')
+
+deleteContact(contactList, 9060096590)
+search(contactList, 5555)
+
+console.log(contactList)
+
+
+
+
+
+
+
+
+
+
 
 
 
