@@ -68,3 +68,36 @@ let users = [
 
 let result = users.map((user) => user.firstName + ' ' + user.lastName)
 console.log(result);
+
+
+// reduce()......
+
+//  1. sum up all the elements in an array
+
+let numbersArr = [1, 2, 3, 4, 5];
+
+let sum = numbersArr.reduce((total, currentValue) => {
+    return total + currentValue;
+}, 0)
+
+console.log(sum);
+
+//  2. find the maximum value in an array
+
+let numbersMax = [5, 20, 100, 60, 1];
+let maxValue = numbersMax.reduce((max, curr) => {
+    if(curr > max) max = curr;
+    return max;
+});
+console.log(maxValue);
+
+
+// 3. merge different objects in a single object
+
+let obj1 = { a: 1, b: 2 };
+let obj2 = { c: 3, d: 4 };
+let obj3 = { e: 5, f: 6 };
+let mergedObj = [obj1, obj2, obj3].reduce((acc, curr) => {
+    return { ...acc, ...curr };
+}, {});
+console.log(mergedObj);
