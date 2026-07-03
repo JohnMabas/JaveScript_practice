@@ -31,7 +31,7 @@ let deleteStudents = (students, Id) => {
     })
     console.log(students)
 }
-deleteStudents(students, '4579')
+// deleteStudents(students, '4579')
 
 
 
@@ -92,7 +92,51 @@ addContact(5555, 'John')
 deleteContact(contactList, 9060096590)
 search(contactList, 5555)
 
-console.log(contactList)
+// console.log(contactList)
+
+
+// Q4.....
+
+//  let studentsArr = [
+//     {name: 'Mabas', scores: [34,5,22,10,66]},
+//     {name: 'John', scores: [3,70,20,11,67]},
+//     {name: 'Dang', scores: [5,98,24,12,60]},
+//     {name: 'Mabas', scores: [35,56,27,18,62]},
+//  ]
+
+//  let averageScores = (studentsArr) => {
+//     let avScores = studentsArr.reduce((acc, total) => acc + total, 0)
+//     console.log(total)
+//  }
+
+//  averageScores()
+
+
+
+// Q5.
+
+ let shoppingCart = [
+    {name: 'phone', price: '300', quantity: 9, category: 'elctronices'},
+    {name: 'shirt', price: '500', quantity: 3, category: 'fashion'},
+    {name: 'labtop', price: '600', quantity: 11, category: 'elctronices'},
+    {name: 'Trouser', price: '800', quantity: 2, category: 'fashion'},
+ ]
+
+
+let cartCost = shoppingCart.reduce((total, item) => {
+    return total + item.price
+
+}, 0)
+
+let mostExp = arr => {
+    
+}
+
+
+
+// console.log(cartCost)
+
+
 
 
 
