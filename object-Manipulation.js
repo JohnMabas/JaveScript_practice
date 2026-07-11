@@ -86,6 +86,51 @@ console.log(fruit == oneMoreFruit)
 console.log(fruit === oneMoreFruit)
 
 
+// Static Methods...
+
+const target = {p:1, q:2};
+const source = {a:3, b:5};
+
+const returnObj = Object.assign(target, source);
+console.log(returnObj)
+
+
+// object to Array
+const myObj = {
+    a: "tapas",
+    b: 32
+}
+
+const myArr = Object.entries(myObj)
+console.log(myArr)
+
+// Array to object
+const entries = new Map([
+    ["foo", "bar"],
+    ["baz", 42]
+]);
+
+const objEntries = Object.fromEntries(entries)
+console.log(objEntries)
+
+// freeze...
+
+const emp = {
+    sal: 100
+}
+
+Object.freeze(emp)
+
+emp.salary = 200
+console.log(emp)
+
+console.log(Object.isFrozen(emp))
+
+
+
+ 
+
+
 
 
 
