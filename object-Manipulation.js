@@ -153,6 +153,6 @@ let student = {
   level: "100",
 };
 
-let { name: firstName, ...rest } = student;
+let { name,level, ...rest } = student;
 
 console.log(rest);
