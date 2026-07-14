@@ -19,7 +19,7 @@ companies.forEach(function(Company) {
     // console.log(Company)
 });
 
-// Filter......
+// Filter..........
 
 // Get 21 and older.
  
@@ -34,11 +34,11 @@ const canDrink = ages.filter(age => age >= 21)
 // console.log(canDrink)
 
 // Filter retail companies...
-// const retailCompanies = companies.filter(function(Company){
-//     if(Company.category === 'Retail'){
-//         return true;
-//     }
-// });
+const retailCompanies = companies.filter(function(Company){
+    if(Company.category === 'Retail'){
+        return true;
+    }
+});
 
 
 const retailCompanies = companies.filter(Company => Company.category === 'Retail');
@@ -51,5 +51,25 @@ const eightiesCompanies = companies.filter(Company => (Company.start >= 1980 && 
 
 // Get companies lasted 10 years or more
 const lastedTenYears = companies.filter(Company => (Company.end - Company.start >= 10));
-console.log(lastedTenYears)
+// console.log(lastedTenYears)
+
+
+// map..........
+
+// Create array of company names
+const companyNames = companies.map(function(company){
+    return company.name;
+});
+
+const textMap = companies.map(function(company){
+    return `${company.name} [${company.start} - ${company.end}]`
+});
+
+// console.log(textMap)
+
+const ageMap = ages
+.map(age => Math.sqrt(age))
+.map(age => age * 2)
+
+// console.log(ageMap)
 
