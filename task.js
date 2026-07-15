@@ -11,3 +11,23 @@ const greaterTwo = numbers.every(num => num > 2)
 const divisibleFive = numbers.some(num => num % 5 === 0)
 // console.log(divisibleFive)
 
+const students = [
+  { name: "Alice", score: 85 },
+  { name: "Bob", score: 42 },
+  { name: "Charlie", score: 91 },
+  { name: "David", score: 65 },
+  { name: "Eve", score: 38 }
+];
+
+const studentName = students.map(name => name.name)
+// console.log(studentName)
+const passedScore = students.filter(score => score.score >= 50)
+// console.log(passedScore)
+const findScore = students.find(stu => stu.score === 91)
+// console.log(findScore)
+const averageScore = students.reduce((total, average) => total += average.score , 0) / students.length
+// console.log(averageScore)
+const studentSort = students.sort((a, b) => b.score - a.score);
+// console.log(studentSort)
+
+
