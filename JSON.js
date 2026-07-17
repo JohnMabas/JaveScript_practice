@@ -15,8 +15,8 @@ const car = {
   features: [
     "Airbags",
     "Radio",
-    "Camera",
     "Bluetooth",
+    "Camera",
     "Electronic Stability Program (ESP),"
   ],
 };
