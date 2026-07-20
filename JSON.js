@@ -4,32 +4,56 @@
 
 // console.log(res)
 
-const car = {
-  brand: "Benz",
-  model: "E250",
-  year: 2023,
-  owner: {
-    name: "Mabas",
-    city: "Jos",
-  },
-  features: [
-    "Airbags",
-    "Radio",
-    "Bluetooth",
-    "Camera",
-    "Electronic Stability Program (ESP),"
-  ],
-};
+// const car = {
+//   brand: "Benz",
+//   model: "E250",
+//   year: 2023,
+//   owner: {
+//     name: "Mabas",
+//     city: "Jos",
+//   },
+//   features: [
+//     "Airbags",
+//     "Radio",
+//     "Bluetooth",
+//     "Camera",
+//     "Electronic Stability Program (ESP),"
+//   ],
+// };
 
-let jsonData = JSON.stringify(car, null, 2);
-console.log(jsonData);
+// let jsonData = JSON.stringify(car, null, 2);
+// console.log(jsonData);
 
-let newCar = JSON.parse(jsonData);
-console.log("Owner Name:", newCar.owner.name);
-console.log("Second Feature:", newCar.features[1]);
+// let newCar = JSON.parse(jsonData);
+// console.log("Owner Name:", newCar.owner.name);
+// console.log("Second Feature:", newCar.features[1]);
 
-if (car.brand === newCar.brand) {
-    console.log("The brands are the same.");
-} else {
-    console.log("The brands are different.");
+// if (car.brand === newCar.brand) {
+//     console.log("The brands are the same.");
+// } else {
+//     console.log("The brands are different.");
+// }
+
+
+import { readFile } from "node:fs/promises"
+
+async function fet() {
+  
+try{
+  let [student, courses, grades] = await Promise.all([
+  readFile("student.json", "utf8"),
+  readFile("courses.json", "utf8"),
+  readFile("grades.json", "utf8")
+]);
+
+const stud = JSON.parse(student);
+const cours = JSON.parse(courses);
+const grad = JSON.parse(grades)
+return [stud, cours, grad]
+} catch(e){
+  console.log(e.message)
 }
+}
+fet().then(res => 
+  console.log(res)
+)
