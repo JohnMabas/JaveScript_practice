@@ -37,7 +37,7 @@
 
 import { readFile } from "node:fs/promises"
 
-async function fet() {
+async function loadData() {
   
 try{
   let [student, courses, grades] = await Promise.all([
@@ -54,6 +54,6 @@ return [stud, cours, grad]
   console.log(e.message)
 }
 }
-fet().then(res => 
+loadData().then(res => 
   console.log(res)
 )
