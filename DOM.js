@@ -12,23 +12,49 @@
 
 // Creating Element
 
-const ul = document.querySelector('ul');
-const li = document.querySelector('li');
-// Adding Element
-ul.append(li)
-// Modifying Element
+// const ul = document.querySelector('ul');
+// const li = document.querySelector('li');
+// // Adding Element
+// ul.append(li)
+// // Modifying Element
 
-li.innerText = 'X-man';
+// li.innerText = 'X-man';
 
-// Modifying Attributes abd class
+// // Modifying Attributes abd class
 
-li.classList.add('list-items')
+// li.classList.add('list-items')
 
-console.log(li.classList.contains('list-items'));
+// console.log(li.classList.contains('list-items'));
 
-// Remove Element
+// // Remove Element
 
-li.remove();
+// li.remove();
+
+// Child Node Traversal
+
+// let ul = document.querySelector('ul');
+
+// ul.childNodes[1].style.backgroundColor = 'blue'
+
+
+
+//  ======Event Listeners=========
+
+const buttonTwo = document.querySelector('.btn-2');
+function alertBtn(){
+    alert('I also love javaScript');
+}
+buttonTwo.addEventListener("click", alertBtn);
+
+// Mouseover
+
+const newBackgroundColor = document.querySelector('.btnExmple-3');
+function changeBgColor(){
+    newBackgroundColor.style.backgroundColor = 'blue';
+}
+newBackgroundColor.addEventListener("mouseover", changeBgColor);
+
+
 
 
 

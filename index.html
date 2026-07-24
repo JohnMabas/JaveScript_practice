@@ -56,6 +56,19 @@ ul {
     cursor: pointer;
 }
 
+.btnCon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-left: 20px;
+}
+
+.btnExmple-1, .btnExmple-2, .btnExmple-3 {
+    border: solid 2px red;
+    padding: 20px;
+}
+
 
 </style>
 
@@ -74,6 +87,27 @@ ul {
             <li class="list-items">Marval</li>
         </ul>
 
+    </div> 
+    
+
+
+    <div class="btnCon">
+    <h1>Event Listeners</h1> <br>
+
+        <div class="btnExmple-1">
+            <h4 id="heading">Example 1</h4>
+            <button class="btn-1" onclick="alert('I love javaScript')">Enter</button>
+        </div>
+
+        <div class="btnExmple-2">
+            <h4 id="heading">Example 2</h4>
+            <button class="btn-2">Enter</button>
+        </div>
+
+        <div class="btnExmple-3">
+            <h4 class="heading">Example 3</h4>
+            <button class="btn-3">Enter</button>
+        </div>
     </div>
     
     <script src="DOM.js"></script>
