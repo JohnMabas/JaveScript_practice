@@ -3,11 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DOM</title>
 </head>
+
+<style>
+    /* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Page Styling */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: linear-gradient(135deg, #1d2b64, #f8cdda);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Container */
+.container {
+    width: 350px;
+    background: #fff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+/* Heading */
+.main-heading {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+
+/* Remove default list style */
+ul {
+    list-style: none;
+}
+
+/* List Items */
+.list-items {
+    background: #f4f4f4;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+
+</style>
+
+
 <body>
+
+    <div class="container">
+        <h1 class="main-heading">Favourite Movie</h1>
+        <ul>
+            <li class="list-items">
+                <span>Neo</span>
+                The Matrix</li>
+            <li class="list-items">Star Wars</li>
+            <li class="list-items">Harry Potter</li>
+            <li class="list-items">Lord of the Rings</li>
+            <li class="list-items">Marval</li>
+        </ul>
+
+    </div>
     
-    <h1>JavaScript</h1>
-    <script src="./object-Manipulation.js"></script>
+    <script src="DOM.js"></script>
 </body>
 </html>
